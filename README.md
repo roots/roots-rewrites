@@ -24,6 +24,8 @@ Roots Rewrites will rewrite your static theme and plugin assets:
 
 ## Installation
 
+It is recommended to install this plugin prior to installing your Roots theme as the `roots_rewrites()` plugin function is only called on the `after_setup_theme` action. If this plugin is installed after the theme, you may have to update your permalink settings to force the .htaccess writes.
+
 If you're using Nginx, you'll need to add the Roots rewrites to your server config before the PHP block (`location ~ \.php$`):
 
 ```nginx
