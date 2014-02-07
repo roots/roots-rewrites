@@ -2,8 +2,8 @@
 /*
 Plugin Name:        Roots Rewrites
 Plugin URI:         http://roots.io/plugins/roots-rewrites/
-Description:        Clean URL rewrites for theme assets in the Roots WordPress Starter Theme
-Version:            1.0.0
+Description:        Clean URL rewrites for your WordPress plugins and theme assets folder.
+Version:            1.0.1
 Author:             Roots
 Author URI:         http://roots.io/
 License:            MIT License

@@ -2,7 +2,7 @@
   "name": "roots/roots-rewrites",
   "type": "wordpress-plugin",
   "license": "MIT",
-  "description": "Clean URL rewrites for theme assets in the Roots WordPress Starter Theme.",
+  "description": "Clean URL rewrites for your WordPress plugins and theme assets folders.",
   "homepage": "http://roots.io/plugin/stage-switcher/",
   "authors": [
     {

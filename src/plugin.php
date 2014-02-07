@@ -18,7 +18,7 @@ class Roots_Rewrites {
     define('RELATIVE_PLUGIN_PATH',  str_replace($home_url, '', plugins_url()));
     define('RELATIVE_CONTENT_PATH', str_replace($home_url, '', content_url()));
     define('THEME_NAME',            next($get_theme_name));
-    define('THEME_PATH',            RELATIVE_CONTENT_PATH . '/themes/' . THEME_NAME);
+    define('THEME_PATH',            RELATIVE_CONTENT_PATH . '/themes/' . THEME_NAME . '/assets');
 
     if (is_admin()) {
       $this->backend();
@@ -38,7 +38,7 @@ class Roots_Rewrites {
       'style_loader_src'
     );
 
-    add_filters($tags, array($this, 'roots_clean_urls'));
+    $this->add_filters($tags, array($this, 'roots_clean_urls'));
   }
 
   private function backend() {
@@ -46,7 +46,7 @@ class Roots_Rewrites {
     global $wp_rewrite;
 
     $roots_new_non_wp_rules = array(
-      'assets/(.*)'  => THEME_PATH . '/assets/$1',
+      'assets/(.*)'  => THEME_PATH . '/$1',
       'plugins/(.*)' => RELATIVE_PLUGIN_PATH . '/$1'
     );
 
@@ -58,7 +58,7 @@ class Roots_Rewrites {
     if (strpos($content, RELATIVE_PLUGIN_PATH) > 0) {
       return str_replace('/' . RELATIVE_PLUGIN_PATH,  '/plugins', $content);
     } else {
-      return str_replace('/' . THEME_PATH, '', $content);
+      return str_replace('/' . THEME_PATH, '/assets', $content);
     }
   }
 
@@ -74,6 +74,12 @@ class Roots_Rewrites {
   private function disabled() {
     if (is_multisite() || is_child_theme() || $this->deactivated()) { return true; }
     return false;
+  }
+
+  private function add_filters($tags, $function) {
+    foreach($tags as $tag) {
+      add_filter($tag, $function);
+    }
   }
 
 }
