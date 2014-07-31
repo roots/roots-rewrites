@@ -21,7 +21,7 @@ class Roots_Rewrites {
     define('THEME_PATH',            RELATIVE_CONTENT_PATH . '/themes/' . THEME_NAME . '/assets');
 
     if (is_admin()) {
-      $this->backend();
+      add_action('admin_init', array($this, 'backend'));
     } else {
       add_action('after_setup_theme', array($this, 'frontend'));
     }
@@ -41,7 +41,7 @@ class Roots_Rewrites {
     $this->add_filters($tags, array($this, 'roots_clean_urls'));
   }
 
-  private function backend() {
+  public function backend() {
     if ($this->disabled()) { return; }
     global $wp_rewrite;
 
