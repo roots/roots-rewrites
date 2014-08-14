@@ -1,6 +1,6 @@
 # Roots Rewrites
 
-Roots Rewrites will rewrite your static theme and plugin assets:
+Roots Rewrites enables clean URL rewrites for your WordPress plugins and theme assets folder.
 
 ```
 /wp-content/themes/themename/assets/css/ to /assets/css/
@@ -20,11 +20,13 @@ Roots Rewrites will rewrite your static theme and plugin assets:
 
 ## Requirements
 
-* [Roots Theme](http://roots.io/) (6.5.1+)
+* Apache with mod_rewrite enabled through .htaccess; Nginx (see Installation for configuration); or any other server that allows you to control its rewrite rules.
+
+* [Roots Theme](http://roots.io/) (6.5.1+) is recommended for compatibility, but is not a requirement since 1.0.1
 
 ## Installation
 
-It is recommended to install this plugin prior to installing your Roots theme as the `roots_rewrites()` plugin function is only called on the `after_setup_theme` action. If this plugin is installed after the theme, you may have to update your permalink settings to force the .htaccess writes.
+Apache will flush rewrite rules on activation and deactivation.
 
 If you're using Nginx, you'll need to add the Roots rewrites to your server config before the PHP block (`location ~ \.php$`):
 
@@ -39,9 +41,14 @@ location ~ ^/plugins/(.*)$ {
 
 ## Support
 
-Use the [Roots Discourse](http://discourse.roots.io/) to ask questions and get support.
+Before asking for help, please visit your site's permalinks page to flush rewrite rules; and open .htaccess to check that the rules are being written correctly.
+
+If you still have issues, please visit [Roots Discourse](http://discourse.roots.io/) and search for answers or ask questions.
 
 ## Changelog
+
+### 1.0.1: February 7th, 2014
+* Supports non-Roots based themes, de/activation hooks added to flush rewrites.
 
 ### 1.0.0: November 5th, 2013
 * Removed from [Roots Theme](http://roots.io/), moved to plugin

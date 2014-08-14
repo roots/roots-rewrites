@@ -1,0 +1,30 @@
+{
+  "name": "roots/roots-rewrites",
+  "type": "wordpress-plugin",
+  "license": "MIT",
+  "description": "Clean URL rewrites for your WordPress plugins and theme assets folders.",
+  "homepage": "http://roots.io/plugin/stage-switcher/",
+  "authors": [
+    {
+      "name": "Ben Word",
+      "email": "ben@benword.com",
+      "homepage": "https://github.com/retlehs"
+    },
+    {
+      "name": "Scott Walkinshaw",
+      "email": "scott.walkinshaw@gmail.com",
+      "homepage": "https://github.com/swalkinshaw"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "support": {
+    "issues": "https://github.com/roots/roots-rewrites/issues",
+    "forum": "http://discourse.roots.io/"
+  },
+  "require": {
+    "php": ">=5.3.0",
+    "composer/installers": "~1.0"
+  }
+}
