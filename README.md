@@ -47,8 +47,8 @@ If you still have issues, please visit [Roots Discourse](http://discourse.roots.
 
 ## Changelog
 
-### 1.0.1: February 7th, 2014
-* Supports non-Roots based themes, de/activation hooks added to flush rewrites.
+### 1.0.1: August 14th, 2014
+* Supports non-Roots based themes, de/activation hooks added to flush rewrites
 
 ### 1.0.0: November 5th, 2013
 * Removed from [Roots Theme](http://roots.io/), moved to plugin
