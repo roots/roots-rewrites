@@ -41,9 +41,15 @@ location ~ ^/plugins/(.*)$ {
 
 ## Support
 
-Before asking for help, please visit your site's permalinks page to flush rewrite rules; and open .htaccess to check that the rules are being written correctly.
+This plugin is no longer supported by Roots and is unlikely to be updated.
 
-If you still have issues, please visit [Roots Discourse](http://discourse.roots.io/) and search for answers or ask questions.
+### Troubleshooting
+
+Visit your site's permalinks page to flush rewrite rules; and open .htaccess to check that the rules are being written correctly.
+
+### Community Support
+
+You may visit [Roots Discourse](http://discourse.roots.io/) and search for answers or ask questions.
 
 ## Changelog
 
